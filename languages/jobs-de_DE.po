@@ -1,0 +1,205 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Jobs v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-11-05 16:49:16+0000\n"
+"Last-Translator: hortt <hortt@raum3.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: jobs.php:20
+#, php-format
+#@ jobs
+msgid "job updated. <a href=\"%s\">View job</a>"
+msgstr "Stellenangebot aktualisiert. <a href=\"%s\">Stellenangebot anzeigen</a>"
+
+#: jobs.php:21
+#@ jobs
+msgid "Custom field updated."
+msgstr "Benutzerdefiniertes Feld aktualisiert."
+
+#: jobs.php:22
+#@ jobs
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertes Feld gelöscht"
+
+#: jobs.php:23
+#@ jobs
+msgid "job updated."
+msgstr "Stellenangebot aktualisiert."
+
+#. translators: %s: date and time of the revision
+#: jobs.php:25
+#, php-format
+#@ jobs
+msgid "job restored to revision from %s"
+msgstr "Stellenangebot von Revision %s wiederhergestellt"
+
+#: jobs.php:26
+#, php-format
+#@ jobs
+msgid "job published. <a href=\"%s\">View job</a>"
+msgstr "Stellenangebot veröffentlicht.  <a href=\"%s\">Stellenangebot ansehen</a>"
+
+#: jobs.php:27
+#@ jobs
+msgid "job saved."
+msgstr "Stellenangebot gespeichert."
+
+#: jobs.php:28
+#, php-format
+#@ jobs
+msgid "job submitted. <a target=\"_blank\" href=\"%s\">Preview job</a>"
+msgstr "Stellenangebot gespeichert. <a target=\"_blank\" href=\"%s\">Stellenangebots Vorschau</a>"
+
+#: jobs.php:29
+#, php-format
+#@ jobs
+msgid "job scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview job</a>"
+msgstr "Stellenangebot für <strong>%1$s</strong> vorbereitet. <a target=\"_blank\" href=\"%2$s\">Stellenangebot Vorschau</a>"
+
+#: jobs.php:29
+#@ default
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: jobs.php:30
+#, php-format
+#@ jobs
+msgid "job draft updated. <a target=\"_blank\" href=\"%s\">Preview job</a>"
+msgstr "Stellenangebots Entwurf aktualisiert. <a target=\"_blank\" href=\"%s\">Stellenangebot Vorschau</a>"
+
+#: jobs.php:49
+#@ jobs
+msgctxt "job"
+msgid "Add New"
+msgstr "Neues hinzufügen"
+
+#: jobs.php:50
+#@ jobs
+msgid "Add New job"
+msgstr "Neues Stellenangebot hinzufügen"
+
+#: jobs.php:51
+#@ jobs
+msgid "Edit job"
+msgstr "Stellenangebot bearbeiten"
+
+#: jobs.php:52
+#@ jobs
+msgid "New job"
+msgstr "Neues Stellenangebot"
+
+#: jobs.php:53
+#@ jobs
+msgid "View job"
+msgstr "Stellenangebot ansehen"
+
+#: jobs.php:54
+#@ jobs
+msgid "Search jobs"
+msgstr "Stellenangebot suchen"
+
+#: jobs.php:55
+#@ jobs
+msgid "No jobs found"
+msgstr "Kein Stellenangebot gefunden"
+
+#: jobs.php:56
+#@ jobs
+msgid "No jobs found in Trash"
+msgstr "Kein Stellenangebot im Papierkorb"
+
+#: jobs.php:58
+#@ jobs
+msgid "jobs"
+msgstr "Stellenangebote"
+
+#: jobs.php:68
+#@ jobs
+msgctxt "post type slug"
+msgid "job"
+msgstr "stellenangebot"
+
+#: jobs.php:90
+#@ jobs
+msgctxt "taxonomy general name"
+msgid "Categories"
+msgstr "Kategorien"
+
+#: jobs.php:91
+#@ jobs
+msgctxt "taxonomy singular name"
+msgid "Category"
+msgstr "Kategorie"
+
+#: jobs.php:92
+#@ jobs
+msgid "Search Categories"
+msgstr "Kategorie suchen"
+
+#: jobs.php:93
+#@ jobs
+msgid "Popular Categories"
+msgstr "Beliebte Kategorien"
+
+#: jobs.php:94
+#@ jobs
+msgid "All Categories"
+msgstr "Alle Kategorien"
+
+#: jobs.php:97
+#@ jobs
+msgid "Edit Category"
+msgstr "Kategorie bearbeiten"
+
+#: jobs.php:98
+#@ jobs
+msgid "Update Category"
+msgstr "Kategorie aktualisiert"
+
+#: jobs.php:99
+#@ jobs
+msgid "Add New Category"
+msgstr "Neue Kategorie erstellen"
+
+#: jobs.php:100
+#@ jobs
+msgid "New Category Name"
+msgstr "Neuer Kategorie Name"
+
+#: jobs.php:101
+#@ jobs
+msgid "Category"
+msgstr "Kategorie"
+
+#: jobs.php:109
+#@ jobs
+msgctxt "taxonomy slug"
+msgid "job-category"
+msgstr "stellenangebots-kategorie"
+
+#: jobs.php:47
+#@ jobs
+msgctxt "post type general name"
+msgid "Jobs"
+msgstr "Stellenangebote"
+
+#: jobs.php:48
+#@ jobs
+msgctxt "post type singular name"
+msgid "Job"
+msgstr "Stellenangebot"
+
