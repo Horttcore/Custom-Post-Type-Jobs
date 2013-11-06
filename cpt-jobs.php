@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Custom Post Type Jobs
-Plugin URI:
-Description: Custom Post Type Jobs
-Version: 0.1
+Plugin URI: http://horttcore.de
+Description: A custom post type for managing job offers
+Version: 0.3
 Author: Ralf Hortt
 Author URI: http://horttcore.de
 License: GPL2
@@ -14,7 +14,7 @@ License: GPL2
 
 /**
  *
- *  Custom Post Type Staff
+ *  Custom Post Type Job
  *
  */
 class Custom_Post_Type_Job
@@ -25,19 +25,21 @@ class Custom_Post_Type_Job
 	/**
 	 * Plugin constructor
 	 *
-	 * @return void
+	 * @access public
 	 * @author Ralf Hortt
 	 **/
-	function __construct()
+	public function __construct()
 	{
+
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'init', array( $this, 'register_post_type' ) );
-		#add_action( 'init', array( $this, 'register_taxonomy' ) );
+		add_action( 'init', array( $this, 'register_taxonomy' ) );
 		add_filter( 'post_updated_messages', array( $this, 'post_updated_messages' ) );
 		add_action( 'save_post', array( $this, 'save_post' ) );
 
 		load_plugin_textdomain( 'jobs', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/'  );
-	}
+
+	} // end __construct
 
 
 
@@ -45,13 +47,14 @@ class Custom_Post_Type_Job
 	 * Register Metaboxes
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
 	 **/
 	public function add_meta_boxes()
 	{
+
 		add_meta_box( 'job-meta', __( 'Information', 'cpt-job' ), array( $this, 'job_meta' ), 'job', 'normal' );
-	}
+
+	} // end add_meta_boxes
 
 
 
@@ -60,25 +63,40 @@ class Custom_Post_Type_Job
 	 *
 	 * @access public
 	 * @param obj $post Post object
-	 * @return void
 	 * @author Ralf Hortt
 	 **/
 	public function job_meta( $post )
 	{
+
 		$meta = get_post_meta( $post->ID, 'job-meta', TRUE );
+
+		do_action( 'job-meta-table-before', $post, $meta );
+
 		?>
+
 		<table class="form-table">
+
+			<?php do_action( 'job-meta-before', $post, $meta ); ?>
+
 			<tr>
 				<th><label for="job-begin"><?php _e( 'Begin:', 'cpt-job' ); ?></label></th>
 				<td>
-					<input size="50" type="text" value="<?php if ( isset($meta['begin']) && '' != $meta['begin'] ) echo $meta['begin'] ?>" name="job-begin" id="job-begin"><br>
+					<input size="50" type="text" value="<?php if ( isset($meta['begin']) && '' != $meta['begin'] ) echo esc_attr( $meta['begin'] ) ?>" name="job-begin" id="job-begin"><br>
 					<small><?php _e( 'dd.mm.yyyy', 'cpt-job' ); ?></small>
 				</td>
 			</tr>
+
+			<?php do_action( 'job-meta-after', $post, $meta ); ?>
+
 		</table>
+
 		<?php
+
+		do_action( 'job-meta-table-after', $post, $meta );
+
 		wp_nonce_field( 'save-job-meta', 'job-meta-nonce' );
-	}
+
+	} // end job_meta
 
 
 
@@ -86,10 +104,12 @@ class Custom_Post_Type_Job
 	 * Update messages
 	 *
 	 * @access public
-	 * @return void
+	 * @param array $messages Messages
+	 * @return array Messages
 	 * @author Ralf Hortt
 	 **/
 	public function post_updated_messages( $messages ) {
+
 		global $post, $post_ID;
 
 		$messages['job'] = array(
@@ -108,20 +128,21 @@ class Custom_Post_Type_Job
 		);
 
 		return $messages;
-	}
+
+	} // end post_updated_messages
 
 
 
 	/**
 	 *
-	 * POST TYPES
+	 * Register post type
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
 	 */
 	public function register_post_type()
 	{
+
 		$labels = array(
 			'name' => _x('Jobs', 'post type general name', 'jobs'),
 			'singular_name' => _x('Job', 'post type singular name', 'jobs'),
@@ -154,20 +175,21 @@ class Custom_Post_Type_Job
 		);
 
 		register_post_type('job',$args);
-	}
+
+	} // end register_post_type
 
 
 
 	/**
 	 *
-	 * CUSTOM TAXONOMY
+	 * Register taxonomy
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
 	 */
 	public function register_taxonomy()
 	{
+
 		$labels = array(
 			'name' => _x( 'Categories', 'taxonomy general name', 'jobs' ),
 			'singular_name' => _x( 'Category', 'taxonomy singular name', 'jobs' ),
@@ -189,8 +211,10 @@ class Custom_Post_Type_Job
 			'show_ui' => TRUE,
 			'query_var' => TRUE,
 			'rewrite' => array( 'slug' => _x( 'job-category', 'taxonomy slug', 'jobs' ) ),
+			'show_admin_column' => TRUE,
 		));
-	}
+
+	} // end register_taxonomy
 
 
 
@@ -199,11 +223,11 @@ class Custom_Post_Type_Job
 	 *
 	 * @access public
 	 * @param int $post_id Post ID
-	 * @return void
 	 * @author Ralf Hortt
 	 **/
-	function save_post( $post_id )
+	public function save_post( $post_id )
 	{
+
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return;
 
@@ -211,11 +235,12 @@ class Custom_Post_Type_Job
 			return;
 
 		$meta = array(
-			'begin' => $_POST['job-begin']
+			'begin' => sanitize_text_field( $_POST['job-begin'] )
 		);
 
-		update_post_meta( $post_id, 'job-meta', $meta );
-	}
+		update_post_meta( $post_id, 'job-meta', apply_filters( 'save-job-meta', $meta ) );
+
+	} // end save_post
 
 
 
