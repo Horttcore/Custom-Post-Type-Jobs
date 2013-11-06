@@ -3,7 +3,7 @@
 Plugin Name: Custom Post Type Jobs
 Plugin URI: http://horttcore.de
 Description: A custom post type for managing job offers
-Version: 0.3
+Version: 0.4
 Author: Ralf Hortt
 Author URI: http://horttcore.de
 License: GPL2
@@ -238,7 +238,7 @@ class Custom_Post_Type_Job
 			'begin' => sanitize_text_field( $_POST['job-begin'] )
 		);
 
-		update_post_meta( $post_id, 'job-meta', apply_filters( 'save-job-meta', $meta ) );
+		update_post_meta( $post_id, 'job-meta', apply_filters( 'save-job-meta', $meta, $post_id ) );
 
 	} // end save_post
 

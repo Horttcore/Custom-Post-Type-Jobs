@@ -32,6 +32,10 @@ A custom post type for job offers
 
 ## Changelog
 
+### v0.4
+
+* Enhancement: Passing $post_id to `save-job-meta`
+
 ### v0.3
 
 * Enhancement: Security
