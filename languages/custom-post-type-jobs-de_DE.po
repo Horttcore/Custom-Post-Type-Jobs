@@ -1,0 +1,287 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Post Type Jobs v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-11-08 14:25:20+0000\n"
+"Last-Translator: horttcore <me@horttcore.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: classes/custom-post-type-jobs.admin.php:38
+#@ custom-post-type-jobs
+msgid "Information"
+msgstr "Informationen"
+
+#: classes/custom-post-type-jobs.admin.php:65
+#@ custom-post-type-jobs
+msgid "Begin:"
+msgstr "Beginn:"
+
+#: classes/custom-post-type-jobs.admin.php:68
+#@ custom-post-type-jobs
+msgid "dd.mm.yyyy"
+msgstr "tt.mm.jjjj"
+
+#: classes/custom-post-type-jobs.admin.php:102
+#: classes/custom-post-type-jobs.admin.php:105
+#@ custom-post-type-jobs
+msgid "Job updated."
+msgstr "Stellenangebot aktualisiert."
+
+#: classes/custom-post-type-jobs.admin.php:103
+#@ custom-post-type-jobs
+msgid "Custom field updated."
+msgstr "Benutzerdefiniertes Feld aktualisiert."
+
+#: classes/custom-post-type-jobs.admin.php:104
+#@ custom-post-type-jobs
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertes Feld gelöscht."
+
+#. translators: %s: date and time of the revision
+#: classes/custom-post-type-jobs.admin.php:107
+#, php-format
+#@ custom-post-type-jobs
+msgid "Job restored to revision from %s"
+msgstr "Stellenangebot von Revision %s wiederhergestellt"
+
+#: classes/custom-post-type-jobs.admin.php:108
+#@ custom-post-type-jobs
+msgid "Job published."
+msgstr "Stellenangebot veröffentlicht."
+
+#: classes/custom-post-type-jobs.admin.php:109
+#@ custom-post-type-jobs
+msgid "Job saved."
+msgstr "Stellenangebot gespeichert."
+
+#: classes/custom-post-type-jobs.admin.php:110
+#@ custom-post-type-jobs
+msgid "Job submitted."
+msgstr "Stellenangebot zur Vorlage versendet."
+
+#: classes/custom-post-type-jobs.admin.php:111
+#, php-format
+#@ custom-post-type-jobs
+msgid "Job scheduled for: <strong>%1$s</strong>."
+msgstr "Stellenangebot für <strong>%1$s</strong> geplant."
+
+#: classes/custom-post-type-jobs.admin.php:113
+#@ custom-post-type-jobs
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: classes/custom-post-type-jobs.admin.php:115
+#@ custom-post-type-jobs
+msgid "Job draft updated."
+msgstr "Stellenangebots-Entwurf aktualisiert."
+
+#: classes/custom-post-type-jobs.admin.php:121
+#: classes/custom-post-type-jobs.php:67
+#@ custom-post-type-jobs
+msgid "View job"
+msgstr "Stellenangebot ansehen"
+
+#: classes/custom-post-type-jobs.admin.php:127
+#@ custom-post-type-jobs
+msgid "Preview job"
+msgstr "Vorschau"
+
+#: classes/custom-post-type-jobs.php:61
+#@ custom-post-type-jobs
+msgctxt "post type general name"
+msgid "Jobs"
+msgstr "Stellenangebote"
+
+#: classes/custom-post-type-jobs.php:62
+#@ custom-post-type-jobs
+msgctxt "post type singular name"
+msgid "Job"
+msgstr "Stellenangebot"
+
+#: classes/custom-post-type-jobs.php:63
+#@ custom-post-type-jobs
+msgctxt "job"
+msgid "Add New"
+msgstr "Erstellen"
+
+#: classes/custom-post-type-jobs.php:64
+#@ custom-post-type-jobs
+msgid "Add New job"
+msgstr "Stellenangebot erstellen"
+
+#: classes/custom-post-type-jobs.php:65
+#@ custom-post-type-jobs
+msgid "Edit job"
+msgstr "Stellenangebot bearbeiten"
+
+#: classes/custom-post-type-jobs.php:66
+#@ custom-post-type-jobs
+msgid "New job"
+msgstr "Neues Stellenangebot"
+
+#: classes/custom-post-type-jobs.php:68
+#@ custom-post-type-jobs
+msgid "Search jobs"
+msgstr "Stellenangebote durchsuchen"
+
+#: classes/custom-post-type-jobs.php:69
+#@ custom-post-type-jobs
+msgid "No jobs found"
+msgstr "Keine Stellenangebote gefunden"
+
+#: classes/custom-post-type-jobs.php:70
+#@ custom-post-type-jobs
+msgid "No jobs found in Trash"
+msgstr "Keine Stellenangebote im Papierkorb"
+
+#: classes/custom-post-type-jobs.php:72
+#: classes/custom-post-type-jobs.widget.php:25
+#@ custom-post-type-jobs
+msgid "Jobs"
+msgstr "Stellenangebote"
+
+#: classes/custom-post-type-jobs.php:79
+#@ custom-post-type-jobs
+msgctxt "post type slug"
+msgid "jobs"
+msgstr "stellenangebote"
+
+#: classes/custom-post-type-jobs.php:109
+#@ custom-post-type-jobs
+msgctxt "taxonomy general name"
+msgid "Categories"
+msgstr "Kategorien"
+
+#: classes/custom-post-type-jobs.php:110
+#@ custom-post-type-jobs
+msgctxt "taxonomy singular name"
+msgid "Category"
+msgstr "Kategorie"
+
+#: classes/custom-post-type-jobs.php:111
+#@ custom-post-type-jobs
+msgid "Search Categories"
+msgstr "Kategorien durchsuchen"
+
+#: classes/custom-post-type-jobs.php:112
+#@ custom-post-type-jobs
+msgid "Popular Categories"
+msgstr "Beliebte Kategorien"
+
+#: classes/custom-post-type-jobs.php:113
+#@ custom-post-type-jobs
+msgid "All Categories"
+msgstr "Alle Kategorien"
+
+#: classes/custom-post-type-jobs.php:116
+#@ custom-post-type-jobs
+msgid "Edit Category"
+msgstr "Bearbeiten"
+
+#: classes/custom-post-type-jobs.php:117
+#@ custom-post-type-jobs
+msgid "Update Category"
+msgstr "Aktualisieren"
+
+#: classes/custom-post-type-jobs.php:118
+#@ custom-post-type-jobs
+msgid "Add New Category"
+msgstr "Stellenangebots Kategorie erstellen"
+
+#: classes/custom-post-type-jobs.php:119
+#@ custom-post-type-jobs
+msgid "New Category Name"
+msgstr "Neuer Kategorie Name"
+
+#: classes/custom-post-type-jobs.php:120
+#: classes/custom-post-type-jobs.widget.php:166
+#@ custom-post-type-jobs
+#@ default
+msgid "Category"
+msgstr "Kategorie"
+
+#: classes/custom-post-type-jobs.php:124
+#@ custom-post-type-jobs
+msgctxt "taxonomy slug"
+msgid "job-category"
+msgstr "stellenangebots-kategorie"
+
+#: classes/custom-post-type-jobs.widget.php:22
+#@ custom-post-type-jobs
+msgid "Lists the latest jobs"
+msgstr "Stellenangebote auflisten"
+
+#: classes/custom-post-type-jobs.widget.php:121
+#@ default
+msgid "Title:"
+msgstr ""
+
+#: classes/custom-post-type-jobs.widget.php:126
+#@ custom-post-type-jobs
+msgid "Order By:"
+msgstr "Sortieren nach:"
+
+#: classes/custom-post-type-jobs.widget.php:128
+#@ default
+msgid "None"
+msgstr ""
+
+#: classes/custom-post-type-jobs.widget.php:129
+#@ custom-post-type-jobs
+msgid "ID"
+msgstr "ID"
+
+#: classes/custom-post-type-jobs.widget.php:130
+#@ default
+msgid "Title"
+msgstr ""
+
+#: classes/custom-post-type-jobs.widget.php:131
+#@ default
+msgid "Date"
+msgstr ""
+
+#: classes/custom-post-type-jobs.widget.php:132
+#@ default
+msgid "Random"
+msgstr ""
+
+#: classes/custom-post-type-jobs.widget.php:137
+#@ default
+msgid "Order:"
+msgstr ""
+
+#: classes/custom-post-type-jobs.widget.php:139
+#@ custom-post-type-jobs
+msgid "Ascending"
+msgstr "Aufsteigend"
+
+#: classes/custom-post-type-jobs.widget.php:140
+#@ custom-post-type-jobs
+msgid "Descending"
+msgstr "Absteigend"
+
+#: classes/custom-post-type-jobs.widget.php:145
+#@ custom-post-type-jobs
+msgid "Count:"
+msgstr "Anzahl:"
+
+#: classes/custom-post-type-jobs.widget.php:151
+#@ custom-post-type-jobs
+msgid "All"
+msgstr "Alle"
+

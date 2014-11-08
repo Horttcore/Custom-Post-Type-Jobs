@@ -19,10 +19,10 @@ class Custom_Post_Type_Jobs_Widget extends WP_Widget {
 
 		$widget_ops = array(
 			'classname' => 'widget-jobs',
-			'description' => __( 'Lists the latest jobs', 'cpt-jobs' ),
+			'description' => __( 'Lists the latest jobs', 'custom-post-type-jobs' ),
 		);
 		$control_ops = array( 'id_base' => 'widget-jobs' );
-		$this->WP_Widget( 'widget-jobs', __( 'Jobs', 'cpt-jobs' ), $widget_ops, $control_ops );
+		$this->WP_Widget( 'widget-jobs', __( 'Jobs', 'custom-post-type-jobs' ), $widget_ops, $control_ops );
 
 		add_action( 'custom-post-type-jobs-widget-output', 'Custom_Post_Type_Jobs_Widget::widget_output', 10, 3 );
 		add_action( 'custom-post-type-jobs-widget-loop-output', 'Custom_Post_Type_Jobs_Widget::widget_loop_output', 10, 3 );
@@ -123,10 +123,10 @@ class Custom_Post_Type_Jobs_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_name( 'orderby' ); ?>"><?php _e( 'Order By:', 'cpt-jobs' ); ?></label><br>
+			<label for="<?php echo $this->get_field_name( 'orderby' ); ?>"><?php _e( 'Order By:', 'custom-post-type-jobs' ); ?></label><br>
 			<select name="<?php echo $this->get_field_name( 'orderby' ); ?>" id="<?php echo $this->get_field_name( 'orderby' ); ?>">
 				<option <?php selected( $instance['orderby'], '' ) ?> value=""><?php _e( 'None' ); ?></option>
-				<option <?php selected( $instance['orderby'], 'ID' ) ?> value="ID"><?php _e( 'ID', 'cpt-jobs' ); ?></option>
+				<option <?php selected( $instance['orderby'], 'ID' ) ?> value="ID"><?php _e( 'ID', 'custom-post-type-jobs' ); ?></option>
 				<option <?php selected( $instance['orderby'], 'title' ) ?> value="title"><?php _e( 'Title' ); ?></option>
 				<option <?php selected( $instance['orderby'], 'date' ) ?> value="date"><?php _e( 'Date' ); ?></option>
 				<option <?php selected( $instance['orderby'], 'rand' ) ?> value="rand"><?php _e( 'Random' ); ?></option>
@@ -136,19 +136,19 @@ class Custom_Post_Type_Jobs_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_name( 'order' ); ?>"><?php _e( 'Order:' ); ?></label><br>
 			<select name="<?php echo $this->get_field_name( 'order' ); ?>" id="<?php echo $this->get_field_name( 'order' ); ?>">
-				<option><?php _e( 'Ascending', 'cpt-jobs' ); ?></option>
-				<option><?php _e( 'Descending', 'cpt-jobs' ); ?></option>
+				<option><?php _e( 'Ascending', 'custom-post-type-jobs' ); ?></option>
+				<option><?php _e( 'Descending', 'custom-post-type-jobs' ); ?></option>
 			</select>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_name( 'limit' ); ?>"><?php _e( 'Count:', 'cpt-jobs' ); ?></label><br>
+			<label for="<?php echo $this->get_field_name( 'limit' ); ?>"><?php _e( 'Count:', 'custom-post-type-jobs' ); ?></label><br>
 			<input type="text" name="<?php echo $this->get_field_name( 'limit' ); ?>" id="<?php echo $this->get_field_name( 'limit' ); ?>" value="<?php echo esc_attr( $instance['limit'] ) ?>">
 		</p>
 
 		<?php
 		$category_dropdown = wp_dropdown_categories(array(
-			'show_option_all' => __( 'All', 'cpt-jobs' ),
+			'show_option_all' => __( 'All', 'custom-post-type-jobs' ),
 			'taxonomy' => 'job-category',
 			'name' => $this->get_field_name( 'job-category' ),
 			'selected' => $instance['job-category'],

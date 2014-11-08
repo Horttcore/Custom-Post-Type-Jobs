@@ -7,6 +7,7 @@ Version: 1.0
 Author: Ralf Hortt
 Author URI: http://horttcore.de
 License: GPL2
+Text Domain: custom-post-type-jobs
 */
 
 require( 'classes/custom-post-type-jobs.php' );

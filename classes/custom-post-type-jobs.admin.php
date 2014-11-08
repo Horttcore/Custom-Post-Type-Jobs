@@ -35,7 +35,7 @@ final class Custom_Post_Type_Job_Admin
 	public function add_meta_boxes()
 	{
 
-		add_meta_box( 'job-meta', __( 'Information', 'cpt-job' ), array( $this, 'job_meta' ), 'job', 'normal' );
+		add_meta_box( 'job-meta', __( 'Information', 'custom-post-type-jobs' ), array( $this, 'job_meta' ), 'job', 'normal' );
 
 	} // end add_meta_boxes
 
@@ -62,10 +62,10 @@ final class Custom_Post_Type_Job_Admin
 			<?php do_action( 'custom-post-type-jobs-meta-box-table-first-row-before', $post, $meta ); ?>
 
 			<tr>
-				<th><label for="job-begin"><?php _e( 'Begin:', 'cpt-job' ); ?></label></th>
+				<th><label for="job-begin"><?php _e( 'Begin:', 'custom-post-type-jobs' ); ?></label></th>
 				<td>
 					<input size="50" type="text" value="<?php if ( isset( $meta['begin'] ) && '' != $meta['begin'] ) echo esc_attr( $meta['begin'] ) ?>" name="job-begin" id="job-begin"><br>
-					<small><?php _e( 'dd.mm.yyyy', 'cpt-job' ); ?></small>
+					<small><?php _e( 'dd.mm.yyyy', 'custom-post-type-jobs' ); ?></small>
 				</td>
 			</tr>
 
