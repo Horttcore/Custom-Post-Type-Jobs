@@ -7,6 +7,7 @@ A custom post type for job offers
 * Title
 * Editor
 * Custom taxonomy `job-category`
+* Widget to display jobs
 
 ## Custom Fields
 
@@ -21,16 +22,39 @@ A custom post type for job offers
 
 ### Actions
 
-* `job-meta-table-before` - Before the post meta table
-* `job-meta-table-before` - First row in the post meta table
-* `job-meta-table-before` - Last row in the post meta table
-* `job-meta-table-before` - After the post meta table
+#### Meta Box
+
+* `custom-post-type-jobs-meta-box-table-before` - Before the post meta table
+* `custom-post-type-jobs-meta-box-table-first-row-before` - First row in the post meta table
+* `custom-post-type-jobs-meta-box-table-last-row-after` - Last row in the post meta table
+* `custom-post-type-jobs-meta-box-table-after` - After the post meta table
+
+#### Widget
+
+* `custom-post-type-jobs-widget-form-before` - Before widget form
+* `custom-post-type-jobs-widget-form-after` - After widget form
+
+* `custom-post-type-jobs-widget-output` - Widget output
+* `custom-post-type-jobs-widget-loop-output` - Widget job output in loop
 
 ### Filters
 
-* `save-job-meta` - Filter the meta data
+#### Meta Box
+
+* `custom-post-type-jobs-save-meta` - Filter the meta data
+
+#### Widget
+
+* `custom-post-type-jobs-widget-form-save` - Save widget
+* `custom-post-type-jobs-widget-query` - Save widget
 
 ## Changelog
+
+### v0.5
+
+* Added: Widget
+* Changed: Renamed actions and filters
+* Enhancement: Rewritten plugin base
 
 ### v0.4
 
