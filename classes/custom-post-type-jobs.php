@@ -39,7 +39,7 @@ class Custom_Post_Type_Job
 	public function load_plugin_textdomain()
 	{
 
-		load_plugin_textdomain( 'custom-post-type-jobs', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/'  );
+		load_plugin_textdomain( 'custom-post-type-jobs', false, dirname( plugin_basename( __FILE__ ) ) . '/../languages/'  );
 
 	} // end load_plugin_textdomain
 
