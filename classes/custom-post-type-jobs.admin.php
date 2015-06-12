@@ -94,7 +94,7 @@ final class Custom_Post_Type_Job_Admin
 	public function post_updated_messages( $messages ) {
 
 		$post             = get_post();
-		$post_type        = get_post_type( $post );
+		$post_type        = 'job';
 		$post_type_object = get_post_type_object( $post_type );
 
 		$messages['job'] = array(
