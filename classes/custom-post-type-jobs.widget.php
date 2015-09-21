@@ -22,7 +22,7 @@ class Custom_Post_Type_Jobs_Widget extends WP_Widget {
 			'description' => __( 'Lists the latest jobs', 'custom-post-type-jobs' ),
 		);
 		$control_ops = array( 'id_base' => 'widget-jobs' );
-		$this->WP_Widget( 'widget-jobs', __( 'Jobs', 'custom-post-type-jobs' ), $widget_ops, $control_ops );
+		parent::__construct( 'widget-jobs', __( 'Jobs', 'custom-post-type-jobs' ), $widget_ops, $control_ops );
 
 		add_action( 'custom-post-type-jobs-widget-output', 'Custom_Post_Type_Jobs_Widget::widget_output', 10, 3 );
 		add_action( 'custom-post-type-jobs-widget-loop-output', 'Custom_Post_Type_Jobs_Widget::widget_loop_output', 10, 3 );
